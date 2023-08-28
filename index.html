@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derren Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/63a7ec8490.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Data Science and Analytics</p>
+                <h1>Hi, I'm <span>Derren</span><br>From Indonesia</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/photo_6298439312336860363_y.jpg" alt="About Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <!-- Add your About Me text here -->
+                    <p>Hey there! I'm Derren Winata, a Data Science and Analytics student at the National University of Singapore. Expected to graduate in June 2026.
+                        I'm proficient at Python, Microsoft Word, PowerPoint, Excel with basic of R, Java, MATLAB, Adobe Premiere Pro and domain knowledge for Data Analytics, Mathematics.
+                        And also I'm fluent in English, Bahasa Indonesia, Hokkien and limited in Chinese.
+                        Thanks for visiting my portfolio! Connect with me through the provided contact info.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Python</span><br>Doing some projects on Python</li>
+                            <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                            <li><span>SQL</span><br>Solving some business cases</li>
+                            <li><span>Web Development</span><br>Web app Developments</li>
+                            <li><span>R</span><br>Solving some business cases</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Flag Communication Executive at NUS Students' Science Club</li>
+                            <li><span>2022 - 2023</span><br>MSOC (Math's and Statistics Orientation Camp) 23/24 Publicity at NUS Statistics and Data Science Society</li>
+                            <li><span>2020 - 2021</span><br>Treasurer at Darma Yudha Scout Movement Council</li>
+                            <li><span>2019 - 2020</span><br>Member of Chemistry Club of Darma Yudha</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Bachelor of Science (Hons) in Data Science and Analytics at NUS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="Services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Python Programming</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste officiis pariatur, animi, rerum voluptatem repellendus porro, asperiores illum unde perspiciatis sit voluptas! At nostrum, alias error possimus in illo?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste officiis pariatur, animi, rerum voluptatem repellendus porro, asperiores illum unde perspiciatis sit voluptas! At nostrum, alias error possimus in illo?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>SQL</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste officiis pariatur, animi, rerum voluptatem repellendus porro, asperiores illum unde perspiciatis sit voluptas! At nostrum, alias error possimus in illo?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste officiis pariatur, animi, rerum voluptatem repellendus porro, asperiores illum unde perspiciatis sit voluptas! At nostrum, alias error possimus in illo?</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>R</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti iste officiis pariatur, animi, rerum voluptatem repellendus porro, asperiores illum unde perspiciatis sit voluptas! At nostrum, alias error possimus in illo?</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function opentab(tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            // Hide all tab contents
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].classList.remove("active-tab");
+            }
+
+            // Remove active class from all tab links
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-link");
+            }
+
+            // Show the selected tab content and add active class to the selected tab link
+            document.getElementById(tabname).classList.add("active-tab");
+            event.target.classList.add("active-link");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
