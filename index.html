@@ -11,13 +11,15 @@
     <header id="header">
         <div class="container">
             <nav>
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Data Science and Analytics</p>
@@ -154,14 +156,11 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>copyright</p>
-    </div>
 </div>
     
 
     <script>
-        function opentab(tabname) {
+       function opentab(tabname)
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -178,6 +177,17 @@
             // Show the selected tab content and add active class to the selected tab link
             document.getElementById(tabname).classList.add("active-tab");
             event.target.classList.add("active-link");
+    </script>
+    
+    <script>
+        var x = document.getElementById("sidemenu");
+
+        function openmenu() {
+            x.style.right = "0";
+        }
+
+        function closemenu() {
+            x.style.right = "-200px"; // Remove the space here
         }
     </script>
 </body>
