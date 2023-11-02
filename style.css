@@ -85,6 +85,39 @@ nav ul li a:hover::after {
     color: #ff004f;
 }
 
+/* Apply fading in animation to header text */
+.header-text {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Apply parallax effect to header background */
+#header {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    transform: translateZ(0);
+}
+
+
 /*-------------about------*/
 #about{
     padding:88 px 0;
